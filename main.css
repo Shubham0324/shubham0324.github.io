@@ -96,12 +96,12 @@ img.my-image{
 .shubham{
     margin: 10px;
     padding: 0 6% 0;
-    background: url('BG-IMAGES/5acb23ea423960fd931c04ca2002794d.jpg') repeat;
+    background: radial-gradient(circle, rgba(34,195,158,1) 5%, rgba(104,191,147,1) 28%, rgba(152,189,114,1) 54%,
+                rgba(165,189,105,1) 60%, rgba(207,188,77,1) 79%, rgba(253,187,45,1) 97%);
     font-family: "Californian FB", SansSerif, serif;
     color: transparent;
     -webkit-background-clip: text;
     font-size: 4vw;
-
 }
 .animation{
     margin: 5px 9.7% 0;
@@ -173,7 +173,6 @@ ul.dot-footer > li{
         margin: auto;
         font-family: "Californian FB", SansSerif, serif;
         font-size: 4vh;
-        color: white;
         padding-bottom: 8px;
     }
     .animation{
