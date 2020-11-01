@@ -23,6 +23,28 @@ form {
   justify-content: center;
   align-items: center;
 }
+
+.verical-quote  {
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 90vh;
+    height: 86px;
+    margin: auto;
+    padding-top: 10px;
+    transform: rotate(-90deg) translate(-50%,50%);
+    transform-origin: 0 50%;
+    text-align: center;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+}
+
 form input,
 form button {
   padding: 0.5rem;
