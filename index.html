@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Hey! I am Shubham Aggarwal. I code solution and sometimes future. Trying to
+                                            more than just a Star Dust in this Unpredectiable Universe.">
+    <meta name="keywords" content="Freelancer,Engineer, Technical Blogs, Programming Help, Shubham Aggarwal, Web development Tutorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shubham Aggarwal">
+    <title>Shubham Aggarwal❤|Technological Guy</title>
+    <link rel = 'stylesheet' href="navigation.css" type="text/css">
+    <link rel = 'stylesheet' href="main.css" type="text/css">
+    <link rel="icon" href="ICON/favicon.ico">
+    <link rel="apple-touch-icon" href="ICON/apple-touch-icon.png">
+
+<body>
+
+    <header>
+        <nav class="topnav" id="myTopnav">
+            <a href="temp.html" class="menu-menu">
+                <img src="ICON\internet.png" title="HOME" alt="" class="nav-icon">Home</a>
+            <a href="temp.html" class="menu-menu">
+                <img src="ICON\article.png" title="MY BLOG" alt="" class="nav-icon">Blog</a>
+            <a href="temp.html" class="menu-menu">
+                <img src="ICON\paper.png" title="WISH LIST" alt="" class="nav-icon">Wish List</a>
+            <a href="temp.html" class="menu-menu">
+                <img src="ICON\contact1.png"title="CONTACT" alt="" class="nav-icon">Contact</a>
+            <a href="temp.html" class="menu-menu">
+                <img src="ICON\person.png" title="ABOUT ME" alt="" class="nav-icon">About</a>
+            <a href="javascript:void(0);" class="menu-menu" id="icon" onclick="myFunction()">&equiv;</a>
+        </nav>
+
+    <div class="alignment">
+        <div>
+            <img src="BG-IMAGES\28951961_181814602437979_1227180621310863913_n.jpg" class="my-image">
+        </div>
+            <h2 class="shubham">Shubham Aggarwal</h2>
+            <p class="animation">I'm |
+            <span
+                    class="txt-rotate"
+                    data-period="2000"
+                    data-rotate='["Developer", "Designer", "Believer", "Enthusiast","Writer","Student","Freelancer","An Ordinary Guy"]'></span>
+        </p>
+            <ul class="dot-footer">
+                <li><a href="https://www.facebook.com/" class="dot-footer"><img src="SOCIAL%20LINK\fb.png" alt="FB"></a></li>
+                <li><a href="https://www.instagram.com/"class="dot-footer"><img src="SOCIAL%20LINK\insta.png" alt="Insta"></a></li>
+                <li><a href="https://www.github.com/"class="dot-footer"><img src="SOCIAL%20LINK\github.png" alt="Github"></a></li>
+                <li><a href="https://www.linkedin.com/"class="dot-footer"><img src="SOCIAL%20LINK\linkedin.png" alt="Linkedin"></a></li>
+                <li><a href="mailto:shubham2403tayal@gmail.com"class="dot-footer"><img src="SOCIAL%20LINK\mail.png" alt="Mail"></a></li>
+            </ul>
+            <button type="button" class="btn-know"><a href="temp.html"style="text-decoration: none"> Read My Blogs</a></button>
+        <p class="animation" style="font-family: 'Baskerville Old Face'; padding-top:10px">I Speak
+            <span
+                    class="txt-rotate"
+                    data-period="1200"
+                    data-rotate='["Python", "Frontend Tech", "Basic C/C++", "Intermediate Java","Maya"]'></span>
+        </p>
+    </div>
+    </header>
+<script>
+var TxtRotate = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 300 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+    }
+
+    setTimeout(function() {
+        that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('txt-rotate');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-rotate');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+            new TxtRotate(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+    document.body.appendChild(css);
+};
+
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</body>
+</html>
