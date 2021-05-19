@@ -127,13 +127,13 @@ ul > li {
 .relative{
     position: relative;
     top:100px;
-    font-size: 200px;
+    font-size: 10vw;
 }
 footer{
     font-size: 1vw;
     font-weight: bold;
     background-color: yellowgreen;
-    background-image: url("icon/oxford-senior-secondary-school-west-delhi-oxford-sr-sec-school-5.jpg") ;
+    background-image: url("../img/oxford-senior-secondary-school-west-delhi-oxford-sr-sec-school-5.jpg") ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -160,5 +160,10 @@ footer{
 @media (min-width: 1200px) {
     iframe {
         width: 50vw;
+    }
+}
+@media (max-width: 476px) {
+    .relative{
+        font-size: 200vw;
     }
 }
