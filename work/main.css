@@ -1,0 +1,164 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-quote{
+    color: darkmagenta;
+    font-size: 25px;
+    font-weight: bold;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 90vh;
+    height: 86px;
+    margin: auto;
+    padding-top:10px;
+    transform: rotate(-90deg) translate(-50%,50%);
+    transform-origin: 0 50%;
+    text-align: center;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+Global Styles
+*/
+
+a, a:visited {
+    text-decoration: none;
+    color: yellow;
+    font-weight: bolder;
+}
+a:hover {
+    text-decoration: underline;
+}
+ul.nav-menu{
+    list-style-type: none;
+    display: flex;
+    margin-top: 1em;
+    padding-top: 5px;
+}
+ul.nav-menu a{
+    font-family: "Times New Roman", SansSerif, serif;
+    overflow: hidden;
+    font-size: 1.3vw;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+a.menu-menu:hover{
+    color: crimson;
+    text-decoration: underline;
+
+
+}
+/*
+/* This feature will be inactive till JS Scripts is introduced in the project
+/* a.menu-menu:active{
+/*    border: medium solid black;
+/*    background-color: darkgray;
+}
+*/
+.border{
+    padding-left: 4%;
+    border-left: 10px solid red;
+    border-top: 10px solid red;
+    border-radius: 100px;
+}
+
+ul.sidebar > li {
+    margin-bottom: 10px;
+}
+ul{
+    text-align: center;
+}
+ul > li {
+    margin:0.4%;
+    padding: 0.24%;
+    text-align: center;
+    justify-content: center;
+    border: 1px black solid;
+    background-color: aliceblue;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.25%;
+    font-size: 1.3vw;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.relative{
+    position: relative;
+    top:100px;
+    font-size: 200px;
+}
+footer{
+    font-size: 1vw;
+    font-weight: bold;
+    background-color: yellowgreen;
+    background-image: url("icon/oxford-senior-secondary-school-west-delhi-oxford-sr-sec-school-5.jpg") ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.footer{
+    display: inline-block;
+ }
+.footer{
+ flex-basis: 33%;
+}
+
+.contact{
+    font-size: 20px;
+    text-align: left;
+}
+
+@media (min-width: 1200px) {
+    iframe {
+        width: 50vw;
+    }
+}
