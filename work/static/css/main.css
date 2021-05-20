@@ -124,9 +124,9 @@ ul > li {
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-.relative{
+.relative-contact{
     position: relative;
-    top:100px;
+    top:5vw;
     font-size: 10vw;
 }
 footer{
@@ -162,8 +162,14 @@ footer{
         width: 50vw;
     }
 }
-@media (max-width: 476px) {
-    .relative{
-        font-size: 200vw;
+@media (max-width: 1500px) {
+    .relative-contact {
+        top: 3vw;
+    }
+}
+
+@media (max-width: 599px) {
+    .relative-contact {
+        top: 0.5vw;
     }
 }
